@@ -151,3 +151,26 @@ This is an internal SX9 project. For questions or issues, contact the developmen
 ## License
 
 Proprietary - SX9 Internal Use Only
+
+---
+
+## Reference Documentation
+
+### RFCs
+
+- [RFC-9120: Prompt Forge V4 Specification](rfcs/RFC-9120-PROMPT-FORGE-V4-SPEC.md) - Complete specification for Prompt Forge V4 including PromptScript DSL, Atomic Clipboard, and Thalmic Filter
+- [RFC-9122: Git Workflow, Linear & Slack Integration](rfcs/RFC-9122-GIT-WORKFLOW-LINEAR-SLACK.md) - Complete Git workflow with Linear orchestration and Slack decision gates
+
+### Bundles
+
+- [forge-unified-v5.tar.gz](bundles/forge-unified-v5.tar.gz) - Original production bundle (extracted to `forge-unified-v5/`)
+
+---
+
+## Version History
+
+### v4.0 (2025-12-23)
+- Initial release with Phase 1 & 2 UI controls
+- Forge Unified V5 bundle integration
+- Implementation plan with critical failure analysis
+- Complete RFC alignment documentation
