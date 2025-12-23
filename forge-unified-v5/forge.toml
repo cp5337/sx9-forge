@@ -1,0 +1,62 @@
+# forge.toml - Unified Pipeline Configuration
+# Synthesizes: RFC-9120, RFC-9121, RFC-9127, QA Bundle
+
+[forge]
+version = "4.0"
+mode = "supervised"
+
+[thalmic]
+min_clarity = 0.7
+
+[factory]
+max_refactor_attempts = 3
+temperature = 0.0
+
+[qa]
+min_grade = "B"
+parallel = true
+
+[qa.weights]
+structure = 0.25
+complexity = 0.25
+pattern = 0.25
+arch = 0.25
+
+[qa.thresholds]
+A = 85
+B = 70
+C = 55
+D = 40
+
+[arch]
+ecs_backend = "legion"
+async_layer = "apecs"
+forbidden = ["bevy", "bevy_ecs"]
+
+[arch.types]
+rune = "u32"
+slot = "u64"
+cuid = "16"
+hash = "u128"
+
+[pattern]
+registry = "./forge/canonical"
+min_confidence = 0.7
+require_nvnn = true
+
+[pattern.categories]
+validation = true
+persistence = true
+concurrency = true
+security = true
+lifecycle = true
+design = true
+
+[git]
+branch_prefix = "factory/SX9-"
+target = "develop"
+slack_gate = true
+
+[glaf]
+backend = "petgraph"
+# neo4j removed per GAP_ANALYSIS
